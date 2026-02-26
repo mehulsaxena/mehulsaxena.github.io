@@ -3,6 +3,7 @@
 .footer-text {
   text-align: center;
   color: $subTitle !important;
+  margin-bottom: 0.5rem;
 }
 
 .dark-mode {
@@ -11,5 +12,42 @@
 
 .footer-div {
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+/* ── Visitor counter ── */
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.4rem;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.06);
+  font-size: 0.82rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.visitor-counter:hover {
+  border-color: rgba(99, 102, 241, 0.6);
+  background: rgba(99, 102, 241, 0.12);
+}
+
+.visitor-eye {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.visitor-number {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6366f1;
+  letter-spacing: 0.02em;
+}
+
+.visitor-label {
+  color: $subTitle;
+  font-size: 0.8rem;
 }

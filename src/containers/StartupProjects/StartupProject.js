@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import "./StartupProjects.scss";
 import {bigProjects} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
@@ -13,6 +13,31 @@ export default function StartupProject() {
   }
 
   const {isDark} = useContext(StyleContext);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const card = entry.target;
+            const index = parseInt(card.dataset.index, 10);
+            card.style.animationDelay = `${index * 0.07}s`;
+            card.classList.add("animate-in");
+            observer.unobserve(card);
+          }
+        });
+      },
+      {threshold: 0.05}
+    );
+
+    cardRefs.current.forEach(card => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   if (!bigProjects.display) {
     return null;
   }
@@ -35,6 +60,8 @@ export default function StartupProject() {
             return (
               <div
                 key={i}
+                data-index={i}
+                ref={el => (cardRefs.current[i] = el)}
                 className={
                   isDark
                     ? "dark-mode project-card project-card-dark"
@@ -47,7 +74,7 @@ export default function StartupProject() {
                       src={project.image}
                       alt={project.projectName}
                       className="card-image"
-                    ></img>
+                    />
                   </div>
                 ) : null}
                 <div className="project-detail">
@@ -63,7 +90,7 @@ export default function StartupProject() {
                   >
                     {project.projectDesc}
                   </p>
-                  {project.footerLink ? (
+                  {project.footerLink && project.footerLink.length > 0 ? (
                     <div className="project-card-footer">
                       {project.footerLink.map((link, i) => {
                         return (

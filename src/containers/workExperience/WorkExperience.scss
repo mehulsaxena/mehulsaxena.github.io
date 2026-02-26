@@ -1,7 +1,18 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .experience-cards-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1rem 1rem;
+  gap: 1.25rem;
 }
 
 .experience-heading {
@@ -21,8 +32,23 @@
   flex: 1;
 }
 
-/* Media Query */
+/* Wrapper — always visible, hover always works */
+.experience-card-wrapper {
+  border-radius: 10px;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
 
+.experience-card-wrapper:hover {
+  transform: translateY(-7px);
+  box-shadow: rgba(99, 102, 241, 0.2) 0px 20px 40px -10px;
+}
+
+/* Entrance animation — cosmetic only */
+.experience-card-wrapper.animate-in {
+  animation: fadeInUp 0.5s ease both;
+}
+
+/* Media Query */
 @media (max-width: 1380px) {
   .experience-heading {
     font-size: 40px;
@@ -36,5 +62,8 @@
   }
   .experience-cards-div {
     grid-template-columns: 1fr;
+  }
+  .experience-card-wrapper:hover {
+    transform: none;
   }
 }
