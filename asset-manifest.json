@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mehul-saxena.github.io/static/css/main.a3890091.css",
-    "main.js": "/mehul-saxena.github.io/static/js/main.a2c5d96a.js",
+    "main.css": "/mehul-saxena.github.io/static/css/main.8a0aaf53.css",
+    "main.js": "/mehul-saxena.github.io/static/js/main.45263c19.js",
     "static/css/64.bba8fa55.chunk.css": "/mehul-saxena.github.io/static/css/64.bba8fa55.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/mehul-saxena.github.io/static/js/64.56dc6704.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/mehul-saxena.github.io/static/css/769.b3cbb36b.chunk.css",
@@ -34,15 +34,15 @@
     "static/media/resume.pdf": "/mehul-saxena.github.io/static/media/resume.f0f733dd3cd732b39262.pdf",
     "index.html": "/mehul-saxena.github.io/index.html",
     "static/media/talksCardBack.svg": "/mehul-saxena.github.io/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.a3890091.css.map": "/mehul-saxena.github.io/static/css/main.a3890091.css.map",
-    "main.a2c5d96a.js.map": "/mehul-saxena.github.io/static/js/main.a2c5d96a.js.map",
+    "main.8a0aaf53.css.map": "/mehul-saxena.github.io/static/css/main.8a0aaf53.css.map",
+    "main.45263c19.js.map": "/mehul-saxena.github.io/static/js/main.45263c19.js.map",
     "64.bba8fa55.chunk.css.map": "/mehul-saxena.github.io/static/css/64.bba8fa55.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/mehul-saxena.github.io/static/js/64.56dc6704.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/mehul-saxena.github.io/static/css/769.b3cbb36b.chunk.css.map",
     "769.bda0d7b7.chunk.js.map": "/mehul-saxena.github.io/static/js/769.bda0d7b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3890091.css",
-    "static/js/main.a2c5d96a.js"
+    "static/css/main.8a0aaf53.css",
+    "static/js/main.45263c19.js"
   ]
 }
