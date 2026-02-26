@@ -75,3 +75,21 @@
 span.certificate-tag:hover {
   background: $buttonHover;
 }
+
+@media (max-width: 768px) {
+  .achievement-cards-div {
+    grid-template-columns: 1fr;
+  }
+  .certificate-image-div {
+    height: 180px;
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .card-subtitle {
+    font-size: 15px;
+  }
+  .certificate-card {
+    padding: 1rem;
+  }
+}

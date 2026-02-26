@@ -23,7 +23,7 @@ const greeting = {
   username: "mehulsaxena",
   title: "Hi, I'm Mehul",
   subTitle: emoji(
-    "Senior DevOps & Data Platform Engineer with 7+ years of experience architecting cloud-native infrastructure, automating enterprise data pipelines, and driving large-scale platform modernization across AWS and Azure. I also build production-grade Gen-AI platforms with governed LLM orchestration, embedding pipelines, vector search, and full-stack MLOps lifecycle management. ⚙️☁️🤖"
+    "Senior AI & MLOps Engineer with 7+ years of experience building production-grade ML and AI systems across AWS and Azure. Specialized in SageMaker pipelines, LLM orchestration, RAG architectures, and enterprise Gen-AI platforms — bridging Data Science and production infrastructure at scale. 🤖☁️⚙️"
   ),
   resumeLink: "", // Add your Google Drive resume link here to enable the download button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -44,28 +44,22 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I Do",
   subTitle:
-    "SENIOR DEVOPS & DATA PLATFORM ENGINEER — CLOUD INFRASTRUCTURE, PIPELINE AUTOMATION, PLATFORM MODERNIZATION & GEN-AI PLATFORM ENGINEERING",
+    "SENIOR AI & MLOPS ENGINEER — ML PIPELINES, LLM ORCHESTRATION, RAG SYSTEMS & MULTI-CLOUD AI PLATFORM ENGINEERING",
   skills: [
     emoji(
-      "⚡ Architect and automate multi-cloud infrastructure on AWS and Azure using Terraform and CloudFormation — from VPC design to multi-environment IaC frameworks"
+      "⚡ Design and operate production ML pipelines on AWS SageMaker — model training, hyperparameter tuning, experiment tracking, model registry, CI/CD for ML, and EKS/ECS-based inference at scale"
     ),
     emoji(
-      "⚡ Design and operate production CI/CD pipelines for containerized microservices and Spark-based data workloads across Jenkins, GitHub Actions, GitLab CI, and ArgoCD"
+      "⚡ Build enterprise LLM orchestration on AWS Bedrock and Azure OpenAI — RAG pipelines, prompt engineering, fine-tuning workflows, and structured model orchestration with Pydantic AI"
     ),
     emoji(
-      "⚡ Build and scale Kubernetes (EKS) and OpenShift clusters for distributed batch processing systems serving millions of daily users"
+      "⚡ Govern the full AI model lifecycle — drift detection, feature validation, batch retraining automation, and real-time Langfuse observability for token monitoring and response quality evaluation"
     ),
     emoji(
-      "⚡ Embed DevSecOps controls into every pipeline — integrating Checkov, Snyk, SonarQube, and Nexus for security scanning, artifact governance, and compliance enforcement"
+      "⚡ Architect multi-cloud AI infrastructure on AWS and Azure using modular Terraform — EKS/ECS inference clusters, SageMaker environments, and CI/CD for AI workloads via GitHub Actions"
     ),
     emoji(
-      "⚡ Automate database migration and lifecycle management for Oracle, PostgreSQL, and Aurora — including schema versioning, release governance, and rollback strategies"
-    ),
-    emoji(
-      "⚡ Build production-grade Gen-AI platforms on AWS Bedrock and Azure AI Studio — LLM orchestration, RAG architectures, embedding pipelines, and vector store integrations across Pinecone, Weaviate, OpenSearch, and FAISS"
-    ),
-    emoji(
-      "⚡ Govern AI security end-to-end: PII detection and masking before embedding, KMS-managed encryption, tenant-level vector namespace isolation, LLM guardrails, and Langfuse-driven model observability"
+      "⚡ Enforce AI data security end-to-end — PII masking pre-embedding, KMS encryption, tenant-level vector namespace isolation, and LLM guardrails across production Gen-AI deployments"
     )
   ],
 
@@ -82,71 +76,17 @@ const skillsSection = {
       skillName: "Azure",
       fontAwesomeClassname: "fab fa-microsoft"
     },
-    // Containers & Orchestration
+    // MLOps & AI
     {
-      skillName: "Docker",
-      fontAwesomeClassname: "fab fa-docker"
-    },
-    {
-      skillName: "Kubernetes",
-      fontAwesomeClassname: "fas fa-dharmachakra"
-    },
-    {
-      skillName: "OpenShift",
-      fontAwesomeClassname: "fab fa-redhat"
-    },
-    // CI/CD
-    {
-      skillName: "Jenkins",
-      fontAwesomeClassname: "fab fa-jenkins"
-    },
-    {
-      skillName: "GitHub Actions",
-      fontAwesomeClassname: "fab fa-github"
-    },
-    {
-      skillName: "GitLab CI",
-      fontAwesomeClassname: "fab fa-gitlab"
-    },
-    // Infrastructure as Code
-    {
-      skillName: "Terraform",
-      fontAwesomeClassname: "fas fa-layer-group"
-    },
-    // Monitoring & Observability
-    {
-      skillName: "Prometheus",
-      fontAwesomeClassname: "fas fa-chart-area"
-    },
-    {
-      skillName: "Grafana",
-      fontAwesomeClassname: "fas fa-chart-bar"
-    },
-    // Scripting & Languages
-    {
-      skillName: "Python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "Bash",
-      fontAwesomeClassname: "fas fa-terminal"
-    },
-    // Platform
-    {
-      skillName: "Linux",
-      fontAwesomeClassname: "fab fa-linux"
-    },
-    {
-      skillName: "PostgreSQL",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    // Gen-AI & LLM
-    {
-      skillName: "LLM Orchestration",
+      skillName: "SageMaker / MLOps",
       fontAwesomeClassname: "fas fa-brain"
     },
     {
-      skillName: "Vector Search",
+      skillName: "LLM Orchestration",
+      fontAwesomeClassname: "fas fa-robot"
+    },
+    {
+      skillName: "RAG / Vector Search",
       fontAwesomeClassname: "fas fa-search"
     },
     {
@@ -156,6 +96,46 @@ const skillsSection = {
     {
       skillName: "AI Guardrails",
       fontAwesomeClassname: "fas fa-shield-alt"
+    },
+    // Containers & Orchestration
+    {
+      skillName: "Docker",
+      fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "Kubernetes",
+      fontAwesomeClassname: "fas fa-dharmachakra"
+    },
+    // CI/CD & IaC
+    {
+      skillName: "GitHub Actions",
+      fontAwesomeClassname: "fab fa-github"
+    },
+    {
+      skillName: "Terraform",
+      fontAwesomeClassname: "fas fa-layer-group"
+    },
+    // Monitoring
+    {
+      skillName: "Prometheus",
+      fontAwesomeClassname: "fas fa-chart-area"
+    },
+    {
+      skillName: "Grafana",
+      fontAwesomeClassname: "fas fa-chart-bar"
+    },
+    // Languages & Platform
+    {
+      skillName: "Python",
+      fontAwesomeClassname: "fab fa-python"
+    },
+    {
+      skillName: "Linux",
+      fontAwesomeClassname: "fab fa-linux"
+    },
+    {
+      skillName: "PostgreSQL",
+      fontAwesomeClassname: "fas fa-database"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -183,27 +163,27 @@ const techStack = {
   viewSkillBars: true, // Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Cloud Infrastructure & IaC",
-      progressPercentage: "90%"
-    },
-    {
-      Stack: "CI/CD & Pipeline Automation",
-      progressPercentage: "88%"
-    },
-    {
-      Stack: "Containers & Orchestration",
-      progressPercentage: "82%"
-    },
-    {
-      Stack: "Gen-AI / LLM Platform Engineering",
-      progressPercentage: "78%"
-    },
-    {
-      Stack: "Python Programming",
+      Stack: "Python & Data Engineering",
       progressPercentage: "92%"
     },
     {
-      Stack: "Data Engineering",
+      Stack: "ML Pipelines & MLOps",
+      progressPercentage: "90%"
+    },
+    {
+      Stack: "Multi-Cloud Infrastructure & IaC",
+      progressPercentage: "88%"
+    },
+    {
+      Stack: "LLM / Gen-AI Platform Engineering",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "CI/CD & DevOps Automation",
+      progressPercentage: "82%"
+    },
+    {
+      Stack: "AI Observability & Monitoring",
       progressPercentage: "80%"
     }
   ],
@@ -216,60 +196,60 @@ const workExperiences = {
   display: true, // Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Platform / DevOps Engineer",
+      role: "Senior MLOps Engineer",
       company: "Trajector Services",
       companylogo: require("./assets/images/companies/trajector.png"),
       date: "Jan 2026 – Present",
-      desc: "Leading DevOps and Gen-AI platform engineering for an enterprise AI Data Platform (AiDC) — governing LLM orchestration, RAG pipelines, vector search, and AI agent infrastructure at production scale.",
+      desc: "Designing and operating enterprise LLM orchestration frameworks supporting the AI Draft Service (AiDC) — leading migration to structured, scalable AI pipelines with full-stack LLM observability in production.",
       descBullets: [
-        "Architected LLM orchestration on AWS Bedrock and Azure AI Studio, integrating Claude, Titan, and GPT-family foundation models into governed AI agent workflows for automated draft creation",
-        "Built end-to-end RAG pipelines — embedding generation via Bedrock Titan and Azure OpenAI, vector store integrations across Pinecone, Weaviate, OpenSearch, and FAISS, with prompt versioning and full Langfuse tracing",
-        "Implemented Gen-AI observability via Langfuse: prompt performance analytics, token cost governance, hallucination detection tracking, and model feedback loops for continuous tuning",
-        "Enforced AI data security: PII detection and masking pre-embedding, KMS-managed encryption (AWS KMS / Azure Key Vault), tenant-level vector namespace isolation, and LLM guardrails for safe model outputs",
-        "Drove K8s → AWS ECS migration using Terraform-managed task definitions, improving horizontal scalability and reducing infrastructure costs",
-        "Hardened the platform with DevSecOps controls — Checkov, Snyk, and SonarQube enforcing security gates across all infra and application pipelines"
+        "Led migration from Azure-based LLM pipelines to structured orchestration using Pydantic AI, improving scalability, type safety, and model governance across enterprise AI workflows",
+        "Implemented Langfuse-based LLM observability stack — prompt tracing, latency tracking, token consumption monitoring, and response quality evaluation in real time",
+        "Designed and operated multi-cloud AI workloads spanning AWS (EKS, S3) and Azure OpenAI, ensuring high availability and consistent model performance across environments",
+        "Led Terraform-based multi-cloud infrastructure restructuring for AI services, standardizing provisioning and reducing configuration drift across AWS and Azure",
+        "Drove Kubernetes → ECS migration for inference workloads, improving horizontal scalability and reducing operational overhead"
       ]
     },
     {
-      role: "Senior DevOps Engineer – AWS Platform Specialist",
+      role: "Senior MLOps / Platform Engineer",
       company: "Zooplus SE / Intellias",
       companylogo: require("./assets/images/companies/zooplus.png"),
       date: "May 2025 – Dec 2025",
-      desc: "Owned DevOps infrastructure for a retail analytics platform serving 2M+ daily users — driving deployment reliability, cluster stability, and security governance for distributed Spark workloads.",
+      desc: "Designed and operated a customer personalization ranking system for 2M+ daily users — owning the full ML lifecycle from feature engineering to production inference and real-time observability.",
       descBullets: [
-        "Managed EKS clusters running distributed Spark batch jobs, ensuring high availability and throughput for data materialization pipelines consumed by downstream APIs",
-        "Standardized all workload rollouts with Helm, eliminating environment drift and improving release consistency across dev, staging, and production",
-        "Automated Aurora PostgreSQL provisioning and schema lifecycle management via CI/CD — removing all manual DB release steps",
-        "Integrated SonarQube, Snyk, and Nexus for end-to-end security scanning, code quality gates, and artifact governance",
-        "Provided L2/L3 production support for Spark job failures and cluster performance degradation, leading RCA and remediation"
+        "Built feature materialization pipelines generating customer behavior signals (clickstream, purchase history, category affinity) used for model training and near real-time personalization ranking",
+        "Implemented SageMaker-based ML workflows covering model training, hyperparameter tuning, versioning, and endpoint deployment — with automated batch retraining pipelines to keep personalization signals fresh",
+        "Developed Suggest APIs exposing ranked product recommendations via scalable EKS-based inference services, handling 2M+ daily user interactions across web and mobile platforms",
+        "Integrated LLM-assisted personalization using AWS Bedrock for contextual product suggestions and intelligent ranking enrichment",
+        "Built model monitoring for data drift, feature distribution shifts, and recommendation quality degradation — with Langfuse, Prometheus, and Grafana providing end-to-end observability",
+        "Automated multi-environment infrastructure provisioning using modular Terraform (EKS, IAM, S3, SageMaker) for fully reproducible deployments"
       ]
     },
     {
-      role: "Senior DevOps Engineer – Cloud Infrastructure",
+      role: "Senior CloudOps Engineer",
       company: "Pentair / SourceFuse",
       companylogo: require("./assets/images/companies/pentair.png"),
       date: "Oct 2024 – Apr 2025",
-      desc: "Built the IaC foundation from zero for an enterprise cloud and database modernization program — replacing all manual provisioning with automated, secure, and auditable infrastructure workflows.",
+      desc: "Supported cloud infrastructure and AI platform initiatives — including an AWS Bedrock-powered RCA POC — while building compliance automation, monitoring dashboards, and cloud governance tooling.",
       descBullets: [
-        "Designed a modular Terraform framework from scratch covering VPC, IAM, RDS (Oracle/PostgreSQL), Aurora, and compute — standardizing multi-environment provisioning across Dev, UAT, and Prod",
-        "Established remote state management with environment isolation and state locking, enabling safe concurrent infrastructure operations across teams",
-        "Built Terraform CI/CD pipelines with Checkov security scanning and controlled apply workflows — enforcing compliance before any infrastructure change reaches production",
-        "Automated Oracle DB deployment pipelines including schema migrations, stored procedures, and SQL governance with Git-based release tagging and rollback strategies",
-        "Implemented AWS Security Hub and Amazon Macie for continuous compliance monitoring and sensitive data exposure detection across environments"
+        "Supported AI-enabled Root Cause Analysis (RCA) POC leveraging AWS Bedrock to automate incident analysis and reduce manual investigation time",
+        "Built AWS Security Hub compliance automation frameworks monitoring security posture across cloud environments with alerting and remediation workflows",
+        "Designed AWS service outage dashboards with automated alerting for proactive incident detection and SLA protection",
+        "Deployed configuration management and change-set automation for controlled, auditable infrastructure updates",
+        "Contributed to governance, audit readiness, and cloud security posture improvements aligned with enterprise compliance standards"
       ]
     },
     {
-      role: "Senior Software Engineer – Cloud Platform",
+      role: "Senior Software Engineer – Cloud, Data & ML Platforms",
       company: "ConsultAdd Inc",
       companylogo: require("./assets/images/companies/consultadd.png"),
       date: "2019 – 2024",
-      desc: "Progressed from Python Developer to Cloud Data Engineer over 5 years — building the automation, CI/CD, and cloud infrastructure backbone for enterprise data platforms.",
+      desc: "Progressed from Python developer to ML platform engineer over 5 years — building data processing pipelines, ML workflows, and cloud infrastructure across healthcare and telecom domains.",
       descBullets: [
-        "Deployed and operated containerized Spark and PySpark jobs on OpenShift clusters, supporting high-volume batch processing pipelines across production environments",
-        "Built automated data pipelines using Spark and AWS Glue for large-scale data ingestion and transformation, integrating with downstream materialized datasets and APIs",
-        "Migrated legacy systems to AWS containerized environments — building Jenkins CI/CD pipelines and Terraform provisioning from the ground up",
-        "Coordinated Oracle schema releases and DB deployments across Dev → UAT → Prod with version-controlled release governance",
-        "Provided L2/L3 production support for data pipeline failures and performed systematic RCA for recurring batch job outages"
+        "Led development of Python-based data processing and predictive analytics pipelines using pandas, NumPy, and scikit-learn across healthcare and telecom domains",
+        "Designed batch and near real-time data pipelines on AWS (S3, Lambda, RDS, Glue) and Apache Spark for large-scale structured and semi-structured data processing",
+        "Implemented data preprocessing, feature engineering, and model evaluation workflows — bridging Data Science teams and production infrastructure",
+        "Automated infrastructure provisioning using Terraform and CI/CD pipelines (Jenkins/GitHub Actions), deploying containerized workloads on ECS/EKS with CloudWatch and ELK monitoring",
+        "Contributed to IAM policy structuring, encryption standards, and audit logging to meet enterprise healthcare data compliance requirements"
       ]
     }
   ]
