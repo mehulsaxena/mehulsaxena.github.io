@@ -1,20 +1,23 @@
-import React, {useState, createRef} from "react";
+import React, {useState, useRef} from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
 export default function ExperienceCard({cardInfo, isDark}) {
   const [colorArrays, setColorArrays] = useState([]);
-  const imgRef = createRef();
+  const imgRef = useRef(null);
 
   function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
+    try {
+      const colorThief = new ColorThief();
+      setColorArrays(colorThief.getColor(imgRef.current));
+    } catch (e) {
+      // fallback: leave banner with default gradient color
+    }
   }
 
   function rgb(values) {
-    return typeof values === "undefined"
-      ? null
-      : "rgb(" + values.join(", ") + ")";
+    if (!values || values.length === 0) return null;
+    return "rgb(" + values.join(", ") + ")";
   }
 
   const GetDescBullets = ({descBullets, isDark}) => {
