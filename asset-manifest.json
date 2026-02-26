@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.b0c23027.css",
-    "main.js": "/static/js/main.490611e2.js",
-    "static/css/64.bba8fa55.chunk.css": "/static/css/64.bba8fa55.chunk.css",
+    "main.css": "/static/css/main.d40acd80.css",
+    "main.js": "/static/js/main.32dbd29b.js",
+    "static/css/64.a55b36e3.chunk.css": "/static/css/64.a55b36e3.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/static/js/64.56dc6704.chunk.js",
-    "static/css/769.b3cbb36b.chunk.css": "/static/css/769.b3cbb36b.chunk.css",
+    "static/css/769.69d678cc.chunk.css": "/static/css/769.69d678cc.chunk.css",
     "static/js/769.bda0d7b7.chunk.js": "/static/js/769.bda0d7b7.chunk.js",
     "static/media/secure-vendor.png": "/static/media/secure-vendor.7ffcebe9d790097ba48d.png",
     "static/media/cicd-pipeline.png": "/static/media/cicd-pipeline.7ceca1e2ccd02d2fb4a6.png",
@@ -34,15 +34,15 @@
     "static/media/resume.pdf": "/static/media/resume.f0f733dd3cd732b39262.pdf",
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.b0c23027.css.map": "/static/css/main.b0c23027.css.map",
-    "main.490611e2.js.map": "/static/js/main.490611e2.js.map",
-    "64.bba8fa55.chunk.css.map": "/static/css/64.bba8fa55.chunk.css.map",
+    "main.d40acd80.css.map": "/static/css/main.d40acd80.css.map",
+    "main.32dbd29b.js.map": "/static/js/main.32dbd29b.js.map",
+    "64.a55b36e3.chunk.css.map": "/static/css/64.a55b36e3.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/static/js/64.56dc6704.chunk.js.map",
-    "769.b3cbb36b.chunk.css.map": "/static/css/769.b3cbb36b.chunk.css.map",
+    "769.69d678cc.chunk.css.map": "/static/css/769.69d678cc.chunk.css.map",
     "769.bda0d7b7.chunk.js.map": "/static/js/769.bda0d7b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0c23027.css",
-    "static/js/main.490611e2.js"
+    "static/css/main.d40acd80.css",
+    "static/js/main.32dbd29b.js"
   ]
 }
