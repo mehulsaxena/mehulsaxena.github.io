@@ -1,6 +1,6 @@
-fs = require("fs");
+const fs = require("fs");
 const https = require("https");
-process = require("process");
+const process = require("process");
 require("dotenv").config();
 
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
@@ -108,7 +108,7 @@ if (MEDIUM_USERNAME && MEDIUM_USERNAME.trim() !== "") {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestMediumFailed);
+      throw new Error(ERR.requestFailedMedium);
     }
 
     res.on("data", d => {

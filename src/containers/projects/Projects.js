@@ -4,6 +4,7 @@ import Button from "../../components/button/Button";
 import {openSource, socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import Loading from "../../containers/loading/Loading";
+import useScrollReveal from "../../hooks/useScrollReveal";
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
@@ -11,8 +12,8 @@ export default function Projects() {
   const FailedLoading = () => null;
   const renderLoader = () => <Loading />;
   const [repo, setrepo] = useState([]);
-  // todo: remove useContex because is not supported
   const {isDark} = useContext(StyleContext);
+  const gridRef = useScrollReveal();
 
   useEffect(() => {
     const getRepoData = () => {
@@ -47,7 +48,7 @@ export default function Projects() {
       <Suspense fallback={renderLoader()}>
         <div className="main" id="opensource">
           <h1 className="project-title">Open Source Projects</h1>
-          <div className="repo-cards-div-main">
+          <div ref={gridRef} className="repo-cards-div-main reveal-stagger">
             {repo.map((v, i) => {
               if (!v) {
                 console.error(

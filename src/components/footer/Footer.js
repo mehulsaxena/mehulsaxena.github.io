@@ -26,7 +26,9 @@ function VisitorCounter() {
 
   return (
     <div className="visitor-counter">
-      <span className="visitor-eye" aria-hidden="true">👁</span>
+      <span className="visitor-eye" aria-hidden="true">
+        👁
+      </span>
       <span className="visitor-number">{count.toLocaleString()}</span>
       <span className="visitor-label">profile views</span>
     </div>

@@ -42,14 +42,12 @@ export default function StartupProject() {
     return null;
   }
   return (
-    <div className="main" id="projects">
+    <div className="main sci-fi-aurora" id="projects">
       <div>
         <h1 className="skills-heading">{bigProjects.title}</h1>
         <p
           className={
-            isDark
-              ? "dark-mode project-subtitle"
-              : "subTitle project-subtitle"
+            isDark ? "dark-mode project-subtitle" : "subTitle project-subtitle"
           }
         >
           {bigProjects.subtitle}

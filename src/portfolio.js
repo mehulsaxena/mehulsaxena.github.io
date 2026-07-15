@@ -22,9 +22,8 @@ const illustration = {
 const greeting = {
   username: "mehulsaxena",
   title: "Hi, I'm Mehul",
-  subTitle: emoji(
-    "Senior AI & MLOps Engineer with 7+ years of experience building production-grade ML and AI systems across AWS and Azure. Specialized in SageMaker pipelines, LLM orchestration, RAG architectures, and enterprise Gen-AI platforms — bridging Data Science and production infrastructure at scale. 🤖☁️⚙️"
-  ),
+  subTitle:
+    "Senior AI & MLOps Engineer with 7+ years of experience building production-grade ML and AI systems across AWS and Azure. Specialized in SageMaker pipelines, LLM orchestration, RAG architectures, and enterprise Gen-AI platforms — bridging Data Science and production infrastructure at scale. 🤖☁️⚙️",
   resumeLink: "", // Add your Google Drive resume link here to enable the download button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
@@ -196,10 +195,23 @@ const workExperiences = {
   display: true, // Set it to true to show workExperiences Section
   experience: [
     {
+      role: "Senior Software Engineer – Platform AI/MLOps",
+      company: "Sauce Labs",
+      companylogo: require("./assets/images/companies/saucelabs.png"),
+      date: "Mar 2026 – Present",
+      desc: "Engineering platform capabilities for AI/MLOps at Sauce Labs — building the infrastructure, tooling, and automation that let AI-driven features ship reliably to production.",
+      descBullets: [
+        "Building and operating platform infrastructure for AI/ML workloads, covering deployment, scaling, and lifecycle management of model-backed services",
+        "Developing CI/CD automation and infrastructure-as-code for AI services to keep environments reproducible and releases low-risk",
+        "Implementing observability for LLM and ML systems — tracing, evaluation, and cost/latency monitoring across production workloads",
+        "Collaborating with product and ML teams to turn AI prototypes into supported, production-grade platform services"
+      ]
+    },
+    {
       role: "Senior MLOps Engineer",
       company: "Trajector Services",
       companylogo: require("./assets/images/companies/trajector.png"),
-      date: "Jan 2026 – Present",
+      date: "Jan 2026 – Mar 2026",
       desc: "Designing and operating enterprise LLM orchestration frameworks supporting the AI Draft Service (AiDC) — leading migration to structured, scalable AI pipelines with full-stack LLM observability in production.",
       descBullets: [
         "Led migration from Azure-based LLM pipelines to structured orchestration using Pydantic AI, improving scalability, type safety, and model governance across enterprise AI workflows",
@@ -260,7 +272,7 @@ To know how to get github key look at readme.md */
 
 const openSource = {
   showGithubProfile: "true",
-  display: false
+  display: true
 };
 
 // Key Projects Section
@@ -314,7 +326,8 @@ const bigProjects = {
     },
     {
       image: require("./assets/images/projects/cicd-pipeline.png"),
-      projectName: "Production-Ready CI/CD Pipeline — Security & DevOps Automation",
+      projectName:
+        "Production-Ready CI/CD Pipeline — Security & DevOps Automation",
       projectDesc:
         "Problem: Teams needed a reusable, enterprise-grade CI/CD reference architecture with built-in security scanning. Solution: Built a 5-stage automated pipeline (Checkout → Lint → Test → Scan → Build → Deploy) using GitHub Actions, Docker, FastAPI, and AWS — integrating SonarCloud, Snyk, Trivy, and Bandit for comprehensive vulnerability coverage. Outcome: Production-ready CI/CD blueprint demonstrating deployment automation patterns used by Fortune 500 companies.",
       footerLink: [
@@ -437,7 +450,7 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Interested in discussing cloud architecture, platform engineering, or a potential opportunity? My inbox is open.",
-  number: "+91-9639715879",
+  number: "",
   email_address: "mehulsaxenaa@gmail.com"
 };
 

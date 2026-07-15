@@ -1,0 +1,382 @@
+@import "./globalColor";
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Zero-dependency animation system.
+   Content is visible by default; useScrollReveal adds .reveal-pending (hidden)
+   only when the browser can animate, then swaps it for .reveal-active when the
+   element scrolls into view. Keyframes (not transitions) drive the reveals so
+   hover transitions on the same elements are never delayed.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes reveal-up-anim {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes reveal-left-anim {
+  from {
+    opacity: 0;
+    transform: translateX(-44px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes reveal-right-anim {
+  from {
+    opacity: 0;
+    transform: translateX(44px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes reveal-zoom-anim {
+  from {
+    opacity: 0;
+    transform: scale(0.93);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Scroll reveals ──────────────────────────────────────────────────────── */
+/* Hidden states only ever apply when motion is allowed; with reduced motion
+   preferred, these rules don't exist and everything renders instantly. */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-pending {
+    opacity: 0;
+  }
+  .reveal-stagger.reveal-pending {
+    opacity: 1;
+  }
+  .reveal-stagger.reveal-pending > * {
+    opacity: 0;
+  }
+  .skill-bars-animate.reveal-pending {
+    opacity: 1;
+  }
+  .skill-bars-animate.reveal-pending .meter > span {
+    width: 0 !important;
+  }
+}
+
+.reveal-active {
+  animation: reveal-up-anim 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+.reveal-active.reveal-left {
+  animation-name: reveal-left-anim;
+}
+.reveal-active.reveal-right {
+  animation-name: reveal-right-anim;
+}
+.reveal-active.reveal-zoom {
+  animation-name: reveal-zoom-anim;
+}
+
+/* Staggered children: the parent stays put, its direct children cascade in */
+.reveal-stagger.reveal-active {
+  animation: none;
+}
+.reveal-stagger.reveal-active > * {
+  animation: reveal-up-anim 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+@for $i from 2 through 12 {
+  .reveal-stagger.reveal-active > *:nth-child(#{$i}) {
+    animation-delay: #{($i - 1) * 0.1}s;
+  }
+}
+
+/* ── Hero entrance cascade (plays on mount, after the splash screen) ─────── */
+
+.hero-cascade > * {
+  animation: reveal-up-anim 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+@for $i from 1 through 6 {
+  .hero-cascade > *:nth-child(#{$i}) {
+    animation-delay: #{0.15 + ($i - 1) * 0.18}s;
+  }
+}
+
+.hero-image-entrance {
+  animation: reveal-right-anim 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s both;
+}
+
+/* Typewriter caret */
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Reserve the final height while typing so the layout below never jumps */
+.typewriter-wrap {
+  position: relative;
+}
+.typewriter-sizer {
+  visibility: hidden;
+}
+.typewriter-live {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.typewriter-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background-color: currentColor;
+  animation: caret-blink 0.9s step-end infinite;
+}
+
+/* ── Skill proficiency bars fill when scrolled into view ─────────────────── */
+
+.skill-bars-animate .meter > span {
+  transition: width 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+/* The bars section itself stays put — only the bars fill */
+.skill-bars-animate.reveal-active {
+  animation: none;
+}
+
+/* ── Hover micro-interactions (transform-only, existing shadows stay) ────── */
+
+@media (hover: hover) {
+  .certificate-card,
+  .repo-card-div,
+  .blog-card,
+  .education-card,
+  .talk-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .certificate-card:hover,
+  .repo-card-div:hover,
+  .blog-card:hover,
+  .education-card:hover,
+  .talk-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .main-button {
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+  .main-button:hover {
+    transform: translateY(-2px) scale(1.03);
+  }
+
+  .social-media-div .icon-button {
+    display: inline-block;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .social-media-div .icon-button:hover {
+    transform: translateY(-4px) scale(1.12);
+  }
+
+  .software-skill-inline > i {
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+      color 0.25s ease;
+  }
+  .software-skill-inline:hover > i {
+    transform: translateY(-5px) scale(1.15);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Sci-fi layer: generative neural canvas, aurora nebulas, gradient headings,
+   neon accents. All code-drawn — no image assets, no dependencies.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Neural particle canvas (rendered by NeuralBackground.js) */
+.sci-fi-section {
+  position: relative;
+  isolation: isolate;
+}
+.neural-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Aurora nebula blobs drifting behind a section */
+.sci-fi-aurora {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.sci-fi-aurora::before,
+.sci-fi-aurora::after {
+  content: "";
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  max-width: 900px;
+  max-height: 900px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.14;
+  z-index: -1;
+  pointer-events: none;
+}
+.sci-fi-aurora::before {
+  top: -18vw;
+  left: -14vw;
+  background: radial-gradient(circle, #6366f1, transparent 62%);
+  animation: aurora-drift 20s ease-in-out infinite alternate;
+}
+.sci-fi-aurora::after {
+  bottom: -16vw;
+  right: -12vw;
+  background: radial-gradient(circle, #00d9ff, transparent 62%);
+  animation: aurora-drift 26s ease-in-out infinite alternate-reverse;
+}
+@keyframes aurora-drift {
+  from {
+    transform: translate3d(-6%, -4%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(10%, 8%, 0) scale(1.18);
+  }
+}
+
+/* Text elements carry an opaque .dark-mode background (Main.scss) that reads
+   as black bands over the aurora glow — let the glow shine through instead. */
+.sci-fi-aurora .dark-mode,
+.sci-fi-section .dark-mode {
+  background-color: transparent;
+}
+
+/* Animated gradient headline text — mid-tone stops read on light AND dark */
+.gradient-shimmer,
+.experience-heading,
+.skills-heading,
+.project-title,
+.achievement-heading,
+.prof-title,
+.contact-title,
+.blog-header-text,
+.talk-header-title,
+.podcast-header-title {
+  background-image: linear-gradient(
+    100deg,
+    #6366f1 0%,
+    #22d3ee 30%,
+    #8b5cf6 60%,
+    #6366f1 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-slide 7s linear infinite;
+  /* background-clip: text only paints inside the box; some headings set
+     line-heights smaller than the font (e.g. Progress.scss 3.5vw on 56px),
+     letting glyph tops escape the box and turn invisible. Force a containing
+     line-height — !important because component styles load after this file. */
+  line-height: 1.25 !important;
+  padding: 0 0.05em;
+}
+@keyframes shimmer-slide {
+  to {
+    background-position: -250% 0;
+  }
+}
+
+/* Profile photo with rotating neon ring */
+.dp-ring {
+  position: relative;
+  display: inline-block;
+  padding: 7px;
+  border-radius: 50%;
+}
+.dp-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#6366f1, #00d9ff, #8b5cf6, #22d3ee, #6366f1);
+  animation: ring-spin 5s linear infinite;
+  box-shadow: 0 0 28px rgba(99, 102, 241, 0.55);
+}
+.dp-ring .profile-image {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+}
+@keyframes ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Neon edge glow on card hover (adds to the transform lift above) */
+@media (hover: hover) {
+  .certificate-card:hover,
+  .repo-card-div:hover,
+  .blog-card:hover,
+  .education-card:hover,
+  .talk-card:hover,
+  .experience-card-wrapper:hover {
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.55),
+      0 0 26px rgba(0, 217, 255, 0.22), 0 14px 34px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* Smooth in-page navigation */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ── Reduced motion: kill the mount animations that apply without JS ─────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-active,
+  .reveal-stagger.reveal-active > *,
+  .hero-cascade > *,
+  .hero-image-entrance,
+  .typewriter-caret,
+  .sci-fi-aurora::before,
+  .sci-fi-aurora::after,
+  .gradient-shimmer,
+  .experience-heading,
+  .skills-heading,
+  .project-title,
+  .achievement-heading,
+  .prof-title,
+  .contact-title,
+  .blog-header-text,
+  .talk-header-title,
+  .podcast-header-title,
+  .dp-ring::before {
+    animation: none;
+  }
+  .skill-bars-animate .meter > span {
+    transition: none;
+  }
+}

@@ -34,7 +34,7 @@ export default function WorkExperience() {
   if (workExperiences.display) {
     return (
       <div id="experience">
-        <div className="experience-container" id="workExperience">
+        <div className="experience-container sci-fi-aurora" id="workExperience">
           <div>
             <h1 className="experience-heading">Experiences</h1>
             <div className="experience-cards-div">

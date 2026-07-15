@@ -3,12 +3,12 @@ Certain colors are used for different and multiply types of elements.
 For greater control over colors visit each components .scss file. */
 
 // ── Button colors ─────────────────────────────────────────────────────────────
-$buttonColor: #6366f1;          // indigo – modern tech accent
-$buttonHover: #818cf8;          // lighter indigo on hover
+$buttonColor: #6366f1; // indigo – modern tech accent
+$buttonHover: #818cf8; // lighter indigo on hover
 $topButtonHover: #0d1117;
 
 // ── Text colors – light theme ─────────────────────────────────────────────────
-$titleColor: #0f172a;           // near-black with cool blue tint
+$titleColor: #0f172a; // near-black with cool blue tint
 $textColor: #1e293b;
 $subTitle: #64748b;
 $cardSubtitle: #475569;
@@ -31,21 +31,21 @@ $githubProfileCardLocationTS: #e0f2fe;
 $githubProfileCardBorder: #6366f1;
 
 // ── Light background colors ───────────────────────────────────────────────────
-$lightBackground1: #f8faff;     // very slight cool tint (not pure white)
+$lightBackground1: #f8faff; // very slight cool tint (not pure white)
 $lightBackground2: #ffffff;
 $lightBackground3: #f1f5f9;
 $blogCardContainerColor: #475569;
 
 // ── Dark background colors ────────────────────────────────────────────────────
-$darkBackground: #0d1117;       // deep dark – GitHub dark / cyber aesthetic
+$darkBackground: #0d1117; // deep dark – GitHub dark / cyber aesthetic
 
 // ── Light theme box shadows ───────────────────────────────────────────────────
-$lightBoxShadowDark: rgba(99, 102, 241, 0.15);   // indigo-tinted shadow
+$lightBoxShadowDark: rgba(99, 102, 241, 0.15); // indigo-tinted shadow
 $lightBoxShadow: rgba(0, 0, 0, 0.08);
 $lightBoxShadowDarker: rgba(0, 0, 0, 0.25);
 
 // ── Dark theme box shadows ────────────────────────────────────────────────────
-$darkBoxShadow: rgba(99, 102, 241, 0.3);          // indigo glow in dark mode
+$darkBoxShadow: rgba(99, 102, 241, 0.3); // indigo glow in dark mode
 $darkBoxShadow2: #ffffff;
 
 // ── Gradients ─────────────────────────────────────────────────────────────────
@@ -64,7 +64,7 @@ $experienceCardBannerLG: linear-gradient(
 
 // ── Borders ───────────────────────────────────────────────────────────────────
 $progressBarBackground: #e2e8f0;
-$lightBorder1: rgba(99, 102, 241, 0.15);        // subtle indigo border
+$lightBorder1: rgba(99, 102, 241, 0.15); // subtle indigo border
 $educationCardBorder: #6366f1;
 
 // ── Hovers ────────────────────────────────────────────────────────────────────
@@ -74,18 +74,18 @@ $headerHoverBG: #f1f5f9;
 $contactDetailHoverTS: #94a3b8;
 
 // ── Skill / progress bar ──────────────────────────────────────────────────────
-$progressBarSpanBG: linear-gradient(90deg, #6366f1, #00d9ff);  // indigo → cyan
+$progressBarSpanBG: linear-gradient(90deg, #6366f1, #00d9ff); // indigo → cyan
 $iconBackground: #1e293b;
 $appHeaderBG: #0d1117;
 
 // ── Misc ──────────────────────────────────────────────────────────────────────
 $skillsColor: #6366f1;
-$appLink: #00d9ff;              // neon cyan links
+$appLink: #00d9ff; // neon cyan links
 
 // ── Social media icons ────────────────────────────────────────────────────────
 $faceBook: #3b5998;
 $linkedin: #0e76a8;
-$github: #6366f1;               // indigo for GitHub icon (on-brand)
+$github: #6366f1; // indigo for GitHub icon (on-brand)
 $gitlab: #fca326;
 $google: #ea4335;
 $twitter: #1da1f2;

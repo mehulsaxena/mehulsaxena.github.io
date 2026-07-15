@@ -1,12 +1,12 @@
 # Mehul Saxena — Developer Portfolio ⚡️
 
-[![GitHub license](https://img.shields.io/github/license/mehulsaxena/mehul-saxena.github.io?color=blue)](https://github.com/mehulsaxena/mehul-saxena.github.io/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/mehulsaxena/mehul-saxena.github.io)](https://github.com/mehulsaxena/mehul-saxena.github.io/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/mehulsaxena/mehul-saxena.github.io)](https://github.com/mehulsaxena/mehul-saxena.github.io/network/members)
+[![GitHub license](https://img.shields.io/github/license/mehulsaxena/mehulsaxena.github.io?color=blue)](https://github.com/mehulsaxena/mehulsaxena.github.io/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/mehulsaxena/mehulsaxena.github.io)](https://github.com/mehulsaxena/mehulsaxena.github.io/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/mehulsaxena/mehulsaxena.github.io)](https://github.com/mehulsaxena/mehulsaxena.github.io/network/members)
 
 > A clean, responsive, and fully customizable developer portfolio built with React — showcasing cloud infrastructure, DevOps automation, Gen-AI platform engineering, and enterprise-scale projects.
 
-**Live:** [mehul-saxena.github.io](https://mehulsaxena.github.io)
+**Live:** [mehulsaxena.github.io](https://mehulsaxena.github.io)
 
 ---
 
@@ -30,13 +30,13 @@
 Click **Fork** on the top right of this page, or use the GitHub CLI:
 
 ```bash
-gh repo fork mehulsaxena/mehul-saxena.github.io --clone
+gh repo fork mehulsaxena/mehulsaxena.github.io --clone
 ```
 
 ### 2. Rename it to your GitHub Pages URL (optional)
 
 ```bash
-gh repo rename <your-username>.github.io --repo <your-username>/mehul-saxena.github.io
+gh repo rename <your-username>.github.io --repo <your-username>/mehulsaxena.github.io
 ```
 
 ### 3. Clone and install
@@ -171,7 +171,7 @@ npx gh-pages -d build
 ## Requirements
 
 ```
-Node.js  v10.16.0 or higher
+Node.js  v20 or higher
 npm      v6.9.0 or higher
 Git      v2.17.1 or higher
 ```
@@ -182,6 +182,13 @@ Git      v2.17.1 or higher
 
 Built on top of [developerFolio](https://github.com/saadpasta/developerFolio) by [@saadpasta](https://github.com/saadpasta).
 Personalized and extended by [Mehul Saxena](https://www.linkedin.com/in/mehul-saxena-cloud-engineer/).
+
+---
+
+## Known Follow-ups
+
+- Migrate off the end-of-life stack (React 16 + Create React App + Enzyme) to Vite + React 18.
+- Dockerfile does not copy `package-lock.json` and runs `npm audit fix` at build time — builds are not reproducible.
 
 ---
 
